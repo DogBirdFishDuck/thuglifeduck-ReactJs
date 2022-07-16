@@ -8,22 +8,17 @@ const TodoList = () => {
     errMessage: "",
   })
 
-  let todoHandle = (event) => {
+  let todoHandle = (event: {target:{value:string}}) => {
     setState({
       ...state,
       todo: event.target.value,
     })
   };
 
-  let submitHandle = async (event) => {
+  let submitHandle = async () => {
     // event.preventDefault();
     try {
-      const pay = {
-        data: {
-          todo: state.todo
-        }
-      }
-      const res = await ApiServices.createTodo(pay);
+      const res = await ApiServices.createTodo(state.todo);
       console.log(res?.data?.error?.message)
       console.log("res")
     } catch (error) {

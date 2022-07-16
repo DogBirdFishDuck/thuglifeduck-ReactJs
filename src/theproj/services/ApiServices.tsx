@@ -10,11 +10,16 @@ export class ApiServices {
 
     return axios.get(todoUrl);
   }
-  static createTodo(todo){
+  static createTodo(todo: String){
     // interface Todo 
 
+    const pay = {
+      data: {
+        todo: todo
+      }
+    }
     let todoUrl = this.url+"/api/test-todos";
 
-    return axios.post(todoUrl,todo);
+    return axios.post(todoUrl, pay);
   }
 }

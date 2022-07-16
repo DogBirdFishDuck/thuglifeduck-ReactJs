@@ -3,7 +3,7 @@ import { ApiServices } from '../services/ApiServices';
 import AddTodoForm from './AddTodoForm';
 
 const TodoList = () => {
-  let [state, setState] = useState(
+  let [state, setState] = useState<{ loading: boolean, todos: { id: number, attributes : {todo:string}}[],errMessage:string}>(
     {
       loading: false,
       todos: [],
