@@ -1,7 +1,7 @@
 
 
 import { Link } from 'react-router-dom'
-import reactLogo from '../assets/react.svg'
+import reactLogo from '/src/assets/react.svg'
 
 function Heeder() {
 

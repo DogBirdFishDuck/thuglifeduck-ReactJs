@@ -1,14 +1,13 @@
-import ReactDOM from "react-dom/client";
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 // import your route components too
-import Home from './Home'
-import TodoPage from './TodoPage'
-import OtherPage from './OtherPage'
-import Heeder from './Heeeder'
+import Home from './pages/Home'
+import TodoPage from './pages/TodoPage'
+import OtherPage from './pages/OtherPage'
+import Heeder from './components/Heeeder'
 
 function MyRoutes() {
   return (
