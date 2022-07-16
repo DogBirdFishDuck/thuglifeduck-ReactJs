@@ -1,5 +1,6 @@
 
 
+import { Link } from 'react-router-dom'
 import reactLogo from '../assets/react.svg'
 
 function Heeder() {
@@ -19,12 +20,8 @@ function Heeder() {
             </button>
           </div>
           <div className='mx-8 hidden sm:flex items-center'>
-            <a href="/" className='mx-4'>
-              Page1
-            </a>
-            <a href="/" className='mx-4'>
-              Page2
-            </a>
+            <Link className='mx-4' to="/">Home</Link>
+            <Link className='mx-4' to="/other">Other Page</Link>
           </div>
           <div className='mx-8 hidden sm:flex py-2'>
             <a href="/" className=''>

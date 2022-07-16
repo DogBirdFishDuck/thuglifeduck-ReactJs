@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import reactLogo from '../assets/react.svg'
 
-function Home() {
+function TodoPage() {
   const [count, setCount] = useState(0)
 
   return (
@@ -13,7 +13,7 @@ function Home() {
             Hello world!
           </h1>
           <p className='m-10 text-2xl'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis rerum porro accusantium eaque nulla dolore quam repellat, iusto aliquam inventore facilis deserunt, sed, autem laborum cum modi facere cupiditate dolorem!
+            oihasohd
           </p>
         </div>
       </section>
@@ -21,4 +21,4 @@ function Home() {
   )
 }
 
-export default Home
+export default TodoPage
