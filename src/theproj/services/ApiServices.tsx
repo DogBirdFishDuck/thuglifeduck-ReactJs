@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export class ApiServices {
-  static url = `http://localhost:1337`;
+  // static url = `http://localhost:1337`;
+  static url = `https://jojostrapibackend.herokuapp.com`;
 
   static getAllTodo(){
     // interface Todo 
