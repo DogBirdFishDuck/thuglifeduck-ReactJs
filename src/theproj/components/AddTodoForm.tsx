@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ApiServices } from '../services/ApiServices';
 
-const TodoList = () => {
+const TodoList = (props: {fetchdataaaa: Function}) => {
   let [state, setState] = useState({
     loading: false,
     todo: "",
@@ -15,12 +15,17 @@ const TodoList = () => {
     })
   };
 
-  let submitHandle = async () => {
-    // event.preventDefault();
+  let submitHandle = async (event: Event | any) => {
+    event.preventDefault();
     try {
       const res = await ApiServices.createTodo(state.todo);
       console.log(res?.data?.error?.message)
       console.log("res")
+      props.fetchdataaaa();
+      setState({
+        ...state,
+        todo: "",
+      })
     } catch (error) {
       console.log(error)
       console.log("error")
