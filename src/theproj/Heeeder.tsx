@@ -22,6 +22,7 @@ function Heeder() {
           <div className='mx-8 hidden sm:flex items-center'>
             <Link className='mx-4' to="/">Home</Link>
             <Link className='mx-4' to="/other">Other Page</Link>
+            <Link className='mx-4' to="/todo">Test Crud </Link>
           </div>
           <div className='mx-8 hidden sm:flex py-2'>
             <a href="/" className=''>
