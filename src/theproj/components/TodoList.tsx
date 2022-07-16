@@ -10,18 +10,25 @@ const TodoList = () => {
       errMessage: ""
     }
   );
-  useEffect(() => {
+  let fetchData = React.useCallback(async () => {
     try {
       setState({ ...state, loading: true });
       let fetchData = async () => {
         const res = await ApiServices.getAllTodo();
         const data = res.data.data;
-        setState({ ...state, todos:data, loading: false });
+        setState({ ...state, todos: data, loading: false });
       };
       fetchData();
     } catch (error) {
-      setState({ ...state, loading: false, errMessage:'failed ' });
+      setState({ ...state, loading: false, errMessage: 'failed ' });
     }
+  }, [])
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  useEffect(() => {
   }, []);
   let {todos} = state;
   return (
@@ -29,7 +36,7 @@ const TodoList = () => {
       <h2 className='text-2xl my-4'>
         Todo List
       </h2>
-      <AddTodoForm />
+      <AddTodoForm fetchdataaaa={fetchData} />
       <ul className='my-4'>
         {
           todos.map((todo) => (
