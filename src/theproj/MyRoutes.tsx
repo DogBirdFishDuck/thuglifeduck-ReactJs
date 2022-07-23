@@ -7,6 +7,7 @@ import {
 import Home from './pages/Home'
 import TodoPage from './pages/TodoPage'
 import OtherPage from './pages/OtherPage'
+import PlayAround1 from './pages/PlayAround1'
 import Heeder from './components/Heeeder'
 
 function MyRoutes() {
@@ -18,6 +19,7 @@ function MyRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/todo" element={<TodoPage />} />
           <Route path="/other" element={<OtherPage />} />
+          <Route path="/playaround" element={<PlayAround1 />} />
         </Routes>
       </div>
       {/* <Routes>
